@@ -24,8 +24,20 @@ class ResumeAnalyzer:
         }
     
     def extract_skills(self, text):
+    # Enhanced skill extraction using NLP
+        common_skills = ["python", "java", "javascript", "machine learning",
+                        "artificial intelligence", "data analysis", "sql"]
+        found_skills = []
+        text_lower = text.lower()
+    
+        for skill in common_skills:
+            if skill in text_lower:
+                found_skills.append(skill)
+    
+        return found_skills
+
         # Placeholder for skill extraction
-        return ["Python", "Machine Learning", "AI"]  # To be implemented
+          # To be implemented
         
     def extract_experience(self, text):
         # Placeholder for experience extraction
